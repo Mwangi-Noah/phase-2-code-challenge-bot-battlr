@@ -42,15 +42,22 @@ function FetchContainer() {
   };
 
   const removeBot = (selectedBot) => {
-    let highlight = allBots.map((bot) => {
-      if (bot.id === selectedBot.id) {
-        bot.owned = !bot.owned;
-        return bot;
-      } else {
-        return bot;
-      }
-    });
-    setAllBots(highlight);
+    fetch(`http://localhost:8001/bots/${selectedBot.id}`, {
+      method: 'DELETE'
+    })
+      .then(res => res.json())
+      .then(data => {
+        let highlight = allBots.map((bot) => {
+          if (bot.id === selectedBot.id) {
+            bot.owned = false;
+            return bot;
+          } else {
+            return bot;
+          }
+        });
+        setAllBots(highlight);
+      })
+      .catch(err => console.log(err));
   };
 
   const filterFreeBots = () => {

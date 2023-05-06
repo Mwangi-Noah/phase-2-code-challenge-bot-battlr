@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+TABLE OF CONTENTS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1.  Introduction 
 
-## Available Scripts
+2.  Technologies used
 
-In the project directory, you can run:
+3.  Setup/Installation
 
-### `npm start`
+4.  Approach
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+5.  Status
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+6.  Licence
 
-### `npm test`
+1.0.    INTRODUCTION.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This application was created to help the Galactic overlord with personnel management. Due to trust issues, a galactic overlord has to directly manage his workforce without any middlemen. For a large workforce, this process becomes very complicated and would be prone to mistake. This app solves this problem by creating a list of all robots under management. The overlord can thus enlist robots to carry out a specific function, they can add a robot to the database, they can also completely remove a robot from the backend server.
 
-### `npm run build`
+2.0.    Technologies used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React.js
+Javascript
+CSS
+HTML
+API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3.0.    Setup and Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+a.  Clone the repository to your local machine.
+b.  Install the required dependencies using npm install
+c.  Run server using the following command "npm run server"
+d. Run the following command "npm start" to initiate the application
 
-### `npm run eject`
+4.0.    Approach 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This application was created utilizing React, CSS, Vanilla Javascript and HTML. React allows one to create application using components. This allows for easier coding and debugging, as well as optimization of the rendering time. In this app, we first created a component that would fetch data from the backend data. This data was then passed to the child component of the Fetch Container (FetchContainer.js) which included the TransactionList, TransactionForm and the SearchFilter. The Transaction List was used to generate the list of past transaction from the database. The SearchFilter component was used to search and filter the components. Finally, the TransactionForm was used to add new Transactions to the Database. The new Trasaction we added through Fetch and Post.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5.0.    Status 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The application is fully functional and ready for use. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+6.0.    License 
+This project is licensed under the MIT License

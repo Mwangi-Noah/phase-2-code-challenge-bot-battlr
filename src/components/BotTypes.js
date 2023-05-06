@@ -71,6 +71,11 @@ function BotTypes(props) {
                 <button className={`ui button fluid ${bot.owned ? 'red' : 'green'}`} onClick={bot.owned ? handleRemoveClick : handleEnlistClick}>
                   {bot.owned ? 'Remove' : 'Enlist'}
                 </button>
+                {bot.owned && (
+                  <button className="ui button fluid red" onClick={handleRemoveClick}>
+                    Remove from Army
+                  </button>
+                )}
               </div>
             </div>
             <button className="ui button fluid" onClick={clearSpec}>
