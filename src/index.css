@@ -1,13 +1,328 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* BotCollection */
+.bot-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* BotItem */
+.bot-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 270px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
 }
+
+.bot-item:hover {
+  transform: scale(1.05);
+}
+
+.bot-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.bot-item h3 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0 0 0;
+  text-align: center;
+}
+
+.bot-item span {
+  font-size: 1rem;
+  color: #999999;
+  margin-top: 0.25rem;
+}
+
+.bot-item .bot-type {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #2d3436;
+  padding: 0.25rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+/* BotTypes */
+.bot-types {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.bot-types img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.bot-types .bot-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+}
+
+.bot-types h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.bot-types h3 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.bot-types .bot-type {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #2d3436;
+  padding: 0.25rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.bot-types .bot-description {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.bot-types .bot-price {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.bot-types .bot-ability {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.bot-types .bot-ability h3 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.bot-types .bot-ability p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.bot-types .bot-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1.5
+}
+
+/* BotSearch.css */
+.BotSearch input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.BotSearch button {
+  background-color: #008cba;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* FilterBots.css */
+.FilterBots {
+  display: flex;
+  align-items: center;
+}
+
+.FilterBots select {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* FetchContainer.css */
+.FetchContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FetchContainer h1 {
+  text-align: center;
+}
+
+.FetchContainer .bot-actions button {
+  background-color: #008cba;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.FetchContainer .bot-actions button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.FetchContainer .bot-details {
+  margin-top: 20px;
+}
+
+.FetchContainer .bot-details img {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+}
+
+.FetchContainer .bot-details dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.FetchContainer .bot-details dt,
+.FetchContainer .bot-details dd {
+  margin: 5px;
+}
+
+.FetchContainer .bot-details dt {
+  font-weight: bold;
+}
+
+.FetchContainer .bot-details dd {
+  flex: 1;
+  }
+  
+  .FetchContainer .bot-details .bot-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .FetchContainer .bot-details .bot-actions button {
+  background-color: #008cba;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+  
+  .FetchContainer .bot-details .bot-actions button:not(:last-child) {
+  margin-right: 10px;
+  }
+  
+  .FetchContainer .bot-details .bot-description {
+  margin-top: 20px;
+  }
+  
+  .FetchContainer .bot-details .bot-description p {
+  line-height: 1.5;
+  }
+  
+  .FetchContainer .bot-details .bot-description a {
+  color: #008cba;
+  }
+  
+  .FetchContainer .bot-details .bot-description a:hover {
+  text-decoration: underline;
+  }
+
+  .ui.four.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .ui.card {
+    width: 300px;
+    margin: 1rem;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ui.card:hover {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .ui.card .image img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  .ui.card .content {
+    padding: 1rem;
+  }
+  
+  .ui.card .header {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .ui.card .catchphrase {
+    margin-top: 1rem;
+    color: gray;
+  }
+  
+  .ui.card .stat-details {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .ui.card .stat-details span {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ui.card .stat-details span i {
+    margin-bottom: 0.5rem;
+  }
+  
+  .ui.icon.military:before {
+    content: "\f0b7";
+    font-size: 1.2rem;
+    color: darkred;
+  }
+  
+  .ui.icon.shield:before {
+    content: "\f132";
+    font-size: 1.2rem;
+    color: dodgerblue;
+  }
+  
+  .ui.icon.ambulance:before {
+    content: "\f0f9";
+    font-size: 1.2rem;
+    color: limegreen;
+  }
