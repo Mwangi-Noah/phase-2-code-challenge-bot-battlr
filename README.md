@@ -33,11 +33,11 @@ d. Run the following command "npm start" to initiate the application
 
 4.0.    Approach 
 
-This application was created utilizing React, CSS, Vanilla Javascript and HTML. React allows one to create application using components. This allows for easier coding and debugging, as well as optimization of the rendering time. In this app, we first created a component that would fetch data from the backend data. This data was then passed to the child component of the Fetch Container (FetchContainer.js) which included the TransactionList, TransactionForm and the SearchFilter. The Transaction List was used to generate the list of past transaction from the database. The SearchFilter component was used to search and filter the components. Finally, the TransactionForm was used to add new Transactions to the Database. The new Trasaction we added through Fetch and Post.
+This application was created utilizing React, CSS, Vanilla Javascript and HTML. For the Project, The FetchContainer held 90% of the functionalities which include the fetch functions, the delete functions, the filter and also search functions. Most of the other components (child components) just styled the final rendered page. The FetchContainer access our db.json from http://localhost:8001/bots. this data was then passed as props to all the other components. No Fetching was carried out separate from the FetchContainer.
 
 5.0.    Status 
 
-The application is fully functional and ready for use. 
+The application is 95% complete with the final css styling remaining.
 
 6.0.    License 
 This project is licensed under the MIT License
