@@ -1,7 +1,6 @@
 import React from "react";
 
-function BotItem ({ bot, addBot, inArmy, releaseFromArmy, dischargeFromService }) {
-  
+function BotItem({ bot, addBot, inArmy, releaseFromArmy, dischargeFromService }) {
   let botType;
 
   switch (bot.bot_class) {
@@ -28,13 +27,9 @@ function BotItem ({ bot, addBot, inArmy, releaseFromArmy, dischargeFromService }
 
   return (
     <div className="column">
-      <div
-        className="card"
-        key={bot.id}
-        onClick={handleClick}
-      >
+      <div className="card" key={bot.id} onClick={handleClick}>
         <div className="image">
-          <img alt="oh no!" src={bot.avatar_url} />
+          <img alt="Missing Bot!" src={bot.avatar_url} />
         </div>
         <div className="content">
           <div className="header">
@@ -60,10 +55,19 @@ function BotItem ({ bot, addBot, inArmy, releaseFromArmy, dischargeFromService }
             {bot.armor}
           </span>
         </div>
+        {inArmy && (
+          <div className="discharge-button-container">
+            <button
+              className="discharge-button"
+              onClick={() => dischargeFromService(bot)}
+            >
+              x
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
-
-};
+}
 
 export default BotItem;

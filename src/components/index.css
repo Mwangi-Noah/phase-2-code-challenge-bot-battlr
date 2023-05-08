@@ -18,10 +18,25 @@
     text-align: center;
     background-color: #6e87b9;
     box-shadow: 0 0 50px rgba(224, 13, 13, 0.1);
-    
-    
-    
 }
+.x-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .x-button:hover {
+    opacity: 0.8;
+  }
 
 .bot-army.container {
   display: flex;
