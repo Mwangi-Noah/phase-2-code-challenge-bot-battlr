@@ -11,10 +11,11 @@ function YourBotArmy({ bots, releaseFromArmy, dischargeFromService }) {
   };
 
   return (
-    <div className="ui segment inverted olive bot-army-container">
+    <div className="bot-army-container">
+    <div>
       <h3>My Bot Army</h3>
       {bots && bots.length > 0 ? (
-        <div className="ui four cards">
+        <div className="bot-row">
           {bots.map((bot) => (
             <BotItem
               key={bot.id}
@@ -28,6 +29,7 @@ function YourBotArmy({ bots, releaseFromArmy, dischargeFromService }) {
       ) : (
         <p>You don't have any bots in your army.</p>
       )}
+      </div>
     </div>
   );
 }

@@ -23,15 +23,10 @@
     
 }
 
-.delete-button {
-    background-color: #9e1111;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .delete-button:hover {
-    background-color: #e74c3c;
-  }
+.bot-army.container {
+  display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 5px;
+
+}
